@@ -1,0 +1,19 @@
+{
+  "name": "semester-project-2",
+  "version": "1.0.0",
+  "description": "Semester Project 2: Auction Website \"Nordic Auction House\".",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch",
+    "build": "npx tailwindcss -i ./css/input.css -o ./css/style.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.18"
+  }
+}
