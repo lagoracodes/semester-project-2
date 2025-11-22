@@ -57,9 +57,11 @@
               Logout
             </button>
 
-            <div
-              class="w-10 h-10 rounded-full bg-[#D9D9D9] cursor-pointer"
-            ></div>
+            <a href="profile.html">
+              <div
+                class="w-10 h-10 rounded-full bg-[#D9D9D9] cursor-pointer hover:opacity-80 transition-opacity"
+              ></div>
+            </a>
           </div>
         </div>
       </div>
@@ -151,90 +153,360 @@
       </div>
     </div>
 
-    <main class="min-h-screen"></main>
+    <main class="min-h-screen">
+      <section class="w-full h-[102px] lg:h-[195px] bg-accent">
+        <div
+          class="max-w-[1440px] mx-auto h-full flex flex-col items-center justify-center relative"
+        >
+          <p
+            class="font-crimson italic font-normal text-[22px] lg:text-[24px] leading-[29px] lg:leading-[31px] text-center capitalize text-white mb-2 lg:mb-4"
+          >
+            Name Of The Listing
+          </p>
+
+          <div
+            class="w-[200px] lg:w-[350px] h-[1px] border-t border-grey-medium mb-2 lg:mb-4"
+          ></div>
+
+          <h1
+            class="font-crimson italic font-bold text-[36px] lg:text-[56px] leading-[47px] lg:leading-[73px] text-center capitalize text-white px-4"
+          >
+            Tiara Of Empress Eugénie
+          </h1>
+        </div>
+      </section>
+
+      <div
+        class="w-full max-w-[1440px] mx-auto px-4 lg:px-0 mt-[40px] lg:mt-[69px] pb-12 lg:pb-[43px] relative"
+      >
+        <div
+          class="hidden lg:block absolute -top-[26px] left-1/2 -translate-x-1/2 w-[304px] h-[51px] z-20"
+        >
+          <img
+            src="../assets/icons/icons-misc/vintage_divider.svg"
+            alt=""
+            class="w-full h-full"
+          />
+        </div>
+
+        <div
+          class="w-full max-w-[408px] lg:max-w-[1246px] mx-auto bg-white lg:bg-background shadow-[0px_4px_40px_rgba(0,0,0,0.15)] rounded-[40px] overflow-hidden p-0 lg:p-0 relative"
+        >
+          <div class="lg:hidden">
+            <div
+              class="w-[356px] h-[234px] mx-auto mt-[53px] border-[21px] border-white"
+            >
+              <img
+                src="../assets/images/images-misc/auction-pic.png"
+                alt="Tiara Of Empress Eugénie"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="px-[53px] mt-[33px]">
+              <h2
+                class="font-lato font-bold text-[25px] leading-[30px] capitalize text-black"
+              >
+                Description
+              </h2>
+              <div
+                class="w-full h-[1px] border-t border-grey-medium mt-[10px] mb-[16px]"
+              ></div>
+              <p
+                class="font-lato font-normal text-[16px] leading-[25px] tracking-[0.05em] capitalize text-black"
+              >
+                Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do
+                Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut
+                Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris
+                Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor
+                In Reprehenderit In Voluptate Velit Esse Cillum Dolore Eu Fugiat
+                Nulla Pariatur. Excepteur Sint Occaecat Cupidatat Non Proident,
+                Sunt In Culpa Qui Officia Deserunt Mollit Anim Id Est Laborum.
+              </p>
+            </div>
+
+            <div class="mt-[64px] flex justify-center">
+              <div class="w-[347px]">
+                <div class="flex justify-between items-center">
+                  <p
+                    class="font-lato font-bold text-[18px] leading-[22px] capitalize text-black"
+                  >
+                    Listing Ends In:
+                  </p>
+                  <p
+                    class="font-lato italic font-normal text-[16px] leading-[19px] text-right capitalize text-accent"
+                  >
+                    28 Days Left
+                  </p>
+                </div>
+                <div
+                  class="w-full h-[1px] border-t border-grey-medium mt-[6px]"
+                ></div>
+              </div>
+            </div>
+
+            <div class="mt-[43px] flex justify-center">
+              <div class="w-[348px]">
+                <div class="flex justify-between items-end">
+                  <p
+                    class="font-lato font-bold text-[18px] leading-[22px] capitalize text-black"
+                  >
+                    Current Top Bid:
+                  </p>
+                  <div class="text-right">
+                    <p
+                      class="font-lato italic font-normal text-[16px] leading-[19px] text-right capitalize text-grey-dark mb-[3px]"
+                    >
+                      (21 Bids)
+                    </p>
+                    <p
+                      class="font-lato font-extrabold text-[18px] leading-[22px] text-right capitalize text-black"
+                    >
+                      750 Points
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="w-full h-[1px] border-t border-grey-medium mt-[6px]"
+                ></div>
+              </div>
+            </div>
+
+            <div class="mt-[129px] flex justify-center pb-[96px]">
+              <div class="w-[345px]">
+                <h3
+                  class="font-lato font-bold text-[25px] leading-[30px] text-center uppercase text-black"
+                >
+                  Place A Bid
+                </h3>
+                <div
+                  class="w-full h-[1px] border-t border-grey-medium mt-[14px]"
+                ></div>
+
+                <p
+                  class="font-lato font-normal text-[16px] leading-[19px] text-center capitalize text-black mt-[22px]"
+                >
+                  Your Point Balance:
+                  <span class="font-normal text-black">1000 Points</span>
+                </p>
+
+                <input
+                  type="text"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  placeholder="Place Your Bid Here .."
+                  class="w-[343px] h-[46px] mx-auto block mt-[20px] bg-[#FAFAFA] border-[0.5px] border-grey-dark rounded-[6px] shadow-[inset_0px_4px_4px_rgba(0,0,0,0.11)] px-4 font-lato font-normal text-[16px] leading-[19px] capitalize text-grey-dark placeholder:text-grey-dark placeholder:italic"
+                />
+
+                <button
+                  class="w-[343px] h-[64px] mx-auto block mt-[18px] bg-accent border-[0.5px] border-grey-dark rounded-[6px] shadow-[0px_1px_5px_rgba(0,0,0,0.19)] font-crimson italic font-semibold text-[24px] leading-[31px] text-center tracking-[0.05em] capitalize text-white"
+                >
+                  Submit Your Bid
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="hidden lg:block">
+            <div class="px-[97px] pt-[48px] pb-[48px]">
+              <div class="grid grid-cols-2 gap-[48px]">
+                <div class="flex flex-col">
+                  <div class="w-full max-w-[466px] border-[21px] border-white">
+                    <img
+                      src="../assets/images/images-misc/auction-pic.png"
+                      alt="Tiara Of Empress Eugénie"
+                      class="w-full h-auto object-cover"
+                    />
+                  </div>
+
+                  <div class="mt-[48px]">
+                    <h2
+                      class="font-lato font-bold text-[36px] leading-[43px] capitalize text-black mb-[12px]"
+                    >
+                      Description
+                    </h2>
+                    <div class="w-full border-t border-black mb-[16px]"></div>
+                    <p
+                      class="font-lato font-normal text-[18px] leading-[25px] tracking-[0.05em] capitalize text-black"
+                    >
+                      Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit,
+                      Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna
+                      Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation
+                      Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat.
+                      Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit
+                      Esse Cillum Dolore Eu Fugiat Nulla Pariatur. Excepteur
+                      Sint Occaecat Cupidatat Non Proident, Sunt In Culpa Qui
+                      Officia Deserunt Mollit Anim Id Est Laborum.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex flex-col">
+                  <div>
+                    <h2
+                      class="font-lato font-bold text-[36px] leading-[43px] capitalize text-black mb-[12px]"
+                    >
+                      Auction Author
+                    </h2>
+                    <div class="w-full border-t border-black mb-[24px]"></div>
+
+                    <div class="flex items-start gap-[16px]">
+                      <div
+                        class="w-[80px] h-[80px] rounded-full bg-grey-medium flex-shrink-0"
+                      ></div>
+                      <div class="flex flex-col gap-[4px]">
+                        <p
+                          class="font-lato font-normal text-[24px] leading-[29px] capitalize text-black"
+                        >
+                          Jane Doe
+                        </p>
+                        <p
+                          class="font-lato font-normal text-[24px] leading-[29px] capitalize text-black"
+                        >
+                          +123 456 78 90
+                        </p>
+                        <p
+                          class="font-lato font-normal text-[24px] leading-[29px] text-black"
+                        >
+                          janedoe@stud.noroff.no
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-[48px]">
+                    <div class="flex justify-between items-baseline mb-[12px]">
+                      <p
+                        class="font-lato font-bold text-[28px] leading-[34px] capitalize text-black"
+                      >
+                        Listing Ends In:
+                      </p>
+                      <p
+                        class="font-lato italic font-normal text-[24px] leading-[29px] text-accent"
+                      >
+                        28 Days Left
+                      </p>
+                    </div>
+                    <div class="w-full border-t border-grey-medium"></div>
+                  </div>
+
+                  <div class="mt-auto mb-[48px]">
+                    <div class="flex justify-between items-end mb-[12px]">
+                      <p
+                        class="font-lato font-bold text-[28px] leading-[34px] capitalize text-black"
+                      >
+                        Current Top Bid:
+                      </p>
+                      <div class="text-right">
+                        <p
+                          class="font-lato italic font-normal text-[24px] leading-[29px] text-grey-dark"
+                        >
+                          (21 Bids)
+                        </p>
+                        <p
+                          class="font-lato font-extrabold text-[28px] leading-[34px] text-black"
+                        >
+                          750 Points
+                        </p>
+                      </div>
+                    </div>
+                    <div class="w-full border-t border-grey-medium"></div>
+                  </div>
+
+                  <div>
+                    <h3
+                      class="font-lato font-bold text-[28px] leading-[34px] uppercase text-black mb-[12px]"
+                    >
+                      Place A Bid
+                    </h3>
+                    <div
+                      class="w-full border-t border-grey-medium mb-[24px]"
+                    ></div>
+
+                    <p
+                      class="font-lato font-normal text-[18px] leading-[22px] text-center capitalize text-black mb-[16px]"
+                    >
+                      Your Point Balance:
+                      <span class="font-normal">1000 Points</span>
+                    </p>
+
+                    <input
+                      type="text"
+                      inputmode="numeric"
+                      pattern="[0-9]*"
+                      placeholder="Place Your Bid Here .."
+                      class="w-full h-[66px] mb-[16px] bg-background border border-grey-dark rounded-[6px] shadow-[inset_0px_4px_4px_rgba(0,0,0,0.11)] px-4 font-lato font-normal text-[24px] leading-[29px] capitalize text-grey-dark placeholder:text-grey-dark"
+                    />
+
+                    <button
+                      class="w-full h-[66px] bg-accent border border-grey-dark rounded-[6px] shadow-[0px_1px_5px_rgba(0,0,0,0.19)] font-crimson italic font-semibold text-[30px] leading-[39px] tracking-[0.05em] capitalize text-white"
+                    >
+                      Submit Your Bid
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <footer class="bg-white border-t border-grey-light">
-      <div class="max-w-[1440px] mx-auto px-4 py-12">
-        <div
-          class="space-y-8 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8 lg:items-start"
-        >
+      <div class="max-w-[1440px] mx-auto px-4 lg:px-0 py-10 lg:py-12">
+        <div class="space-y-8 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
           <div class="text-center lg:text-right">
             <a href="../index.html" class="inline-block">
-              <h2 class="font-walker text-accent text-[24px] lg:text-[36px]">
+              <h2 class="font-walker text-black text-[24px] lg:text-[36px]">
                 Nordic Auction House
               </h2>
             </a>
-
-            <div>
-              <p class="font-lato text-black text-[18px] italic mb-3">
+            <div class="mt-2">
+              <p class="font-lato text-black text-[14px] italic mb-3">
                 Sign Up For Our Newsletter!
               </p>
-
               <div class="flex gap-2 justify-center lg:justify-end">
                 <input
                   type="email"
                   placeholder="Your Email Here.."
-                  class="font-lato bg-background border border-grey-dark lg:border-grey-medium rounded lg:rounded-[7px] px-3 py-2 lg:px-4 lg:py-0 text-[16px] lg:text-[18px] text-grey-dark italic font-medium w-36 lg:w-[217px] lg:h-[30px]"
+                  class="font-lato bg-background border border-grey-dark lg:border-grey-medium rounded-[4px] px-3 py-2 lg:py-0 text-[14px] text-grey-medium italic placeholder:text-grey-medium w-36 lg:w-[217px]"
                 />
-
                 <button
-                  class="bg-accent border border-grey-medium rounded lg:rounded-[7px] px-4 py-2 lg:px-0 lg:py-0 lg:w-[75px] lg:h-[30px] text-white font-lato text-[18px] italic"
+                  class="bg-accent border border-grey-medium rounded-[4px] px-4 py-2 lg:px-0 lg:py-0 w-[55px] lg:w-[75px] text-white font-lato text-[14px] italic capitalize"
                 >
                   Join
                 </button>
               </div>
             </div>
           </div>
-
           <nav class="hidden lg:flex flex-col gap-3 text-center items-center">
             <a
               href="../index.html"
-              class="inline-block font-lato text-black text-[18px] hover:text-accent"
+              class="inline-block font-lato text-black text-[16px] hover:text-accent"
               >Home</a
             >
-
             <a
               href="all-listings.html"
-              class="inline-block font-lato text-black text-[18px] hover:text-accent"
+              class="inline-block font-lato text-black text-[16px] hover:text-accent"
               >Listings</a
             >
-
             <a
               href="about.html"
-              class="inline-block font-lato text-black text-[18px] hover:text-accent"
+              class="inline-block font-lato text-black text-[16px] hover:text-accent"
               >About</a
             >
-
             <a
               href="contact.html"
-              class="inline-block font-lato text-black text-[18px] hover:text-accent"
+              class="inline-block font-lato text-black text-[16px] hover:text-accent"
               >Contact</a
             >
           </nav>
-
           <div class="space-y-6 text-center lg:text-right">
             <div class="space-y-4">
-              <p class="font-lato text-black text-lg italic font-bold">
+              <p class="font-lato text-black text-[16px] italic font-bold">
                 Follow us
               </p>
-
               <div class="flex gap-4 justify-center lg:justify-end">
-                <button class="w-6 h-6 cursor-pointer">
-                  <img
-                    src="../assets/icons/social-media/facebook.svg"
-                    alt="Facebook"
-                    class="w-full h-full"
-                  />
-                </button>
-
-                <button class="w-6 h-6 cursor-pointer">
-                  <img
-                    src="../assets/icons/social-media/instagram.svg"
-                    alt="Instagram"
-                    class="w-full h-full"
-                  />
-                </button>
-
                 <button class="w-6 h-6 cursor-pointer">
                   <img
                     src="../assets/icons/social-media/youtube.svg"
@@ -242,7 +514,20 @@
                     class="w-full h-full"
                   />
                 </button>
-
+                <button class="w-6 h-6 cursor-pointer">
+                  <img
+                    src="../assets/icons/social-media/instagram.svg"
+                    alt="Instagram"
+                    class="w-full h-full"
+                  />
+                </button>
+                <button class="w-6 h-6 cursor-pointer">
+                  <img
+                    src="../assets/icons/social-media/facebook.svg"
+                    alt="Facebook"
+                    class="w-full h-full"
+                  />
+                </button>
                 <button class="w-6 h-6 cursor-pointer">
                   <img
                     src="../assets/icons/social-media/twitter.svg"
@@ -252,18 +537,13 @@
                 </button>
               </div>
             </div>
-
-            <hr
-              class="border-t border-grey-light w-32 mx-auto lg:ml-auto lg:mr-0"
-            />
-
+            <hr class="border-t border-grey-light w-32 mx-auto lg:ml-auto" />
             <div class="space-y-4">
-              <p class="font-lato text-black text-lg italic font-bold">
+              <p class="font-lato text-black text-[16px] italic font-bold">
                 Get our app on
               </p>
-
               <div
-                class="space-y-2 lg:space-y-0 flex flex-col lg:flex-row lg:gap-4 items-center lg:items-end lg:justify-end"
+                class="space-y-2 lg:space-y-0 flex flex-col lg:flex-row lg:gap-2 items-center lg:justify-end"
               >
                 <button class="cursor-pointer">
                   <img
@@ -272,19 +552,17 @@
                     class="w-[112px] lg:w-[120px]"
                   />
                 </button>
-
                 <button class="cursor-pointer">
                   <img
                     src="../assets/icons/social-media/google-play-min.png"
                     alt="Google Play"
-                    class="w-[100px] lg:w-[120px]"
+                    class="w-[112px] lg:w-[120px]"
                   />
                 </button>
               </div>
             </div>
           </div>
         </div>
-
         <div class="mt-8 text-center">
           <p class="font-lato text-black text-[13px] leading-4">
             © 2025 Nordic Auction House AS, All Rights Reserved.

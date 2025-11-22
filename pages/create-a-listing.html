@@ -57,9 +57,11 @@
               Logout
             </button>
 
-            <div
-              class="w-10 h-10 rounded-full bg-[#D9D9D9] cursor-pointer"
-            ></div>
+            <a href="profile.html">
+              <div
+                class="w-10 h-10 rounded-full bg-[#D9D9D9] cursor-pointer hover:opacity-80 transition-opacity"
+              ></div>
+            </a>
           </div>
         </div>
       </div>
@@ -151,7 +153,145 @@
       </div>
     </div>
 
-    <main class="min-h-screen"></main>
+    <main class="min-h-screen">
+      <div
+        class="w-full h-[78px] lg:h-[130px] bg-accent flex items-center justify-center"
+      >
+        <h2
+          class="font-crimson italic font-bold text-[36px] lg:text-[56px] leading-[47px] lg:leading-[73px] capitalize text-white"
+        >
+          add a Listing
+        </h2>
+      </div>
+
+      <div
+        class="w-full px-4 lg:px-0 mt-[52px] lg:mt-[62px] mb-[111px] lg:mb-0 flex justify-center"
+      >
+        <div class="relative w-full max-w-[408px] lg:max-w-[1033px]">
+          <div
+            class="absolute left-1/2 -translate-x-1/2 z-10 -top-[19px] lg:-top-[26px]"
+          >
+            <img
+              src="../assets/icons/icons-misc/vintage_divider.svg"
+              alt="Decorative divider"
+              class="w-[197px] h-[33px] lg:w-[312px] lg:h-[53px]"
+            />
+          </div>
+
+          <div
+            class="bg-[rgba(217,217,217,0.1)] shadow-[0px_4px_40px_rgba(0,0,0,0.15)] rounded-[40px] w-full pt-[75px] lg:pt-[95px] pb-[114px] lg:pb-[84px] px-[37px] lg:px-[82px]"
+          >
+            <form class="w-full">
+              <div class="mb-[44px] lg:mb-[51px]">
+                <label
+                  for="item-name"
+                  class="block font-lato font-semibold text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] uppercase text-black opacity-95 mb-[22px] lg:mb-[23px]"
+                >
+                  Name of the auction item:
+                </label>
+                <input
+                  type="text"
+                  id="item-name"
+                  placeholder="Enter Item Name..."
+                  class="w-full lg:max-w-[429px] h-12 border border-[rgba(125,125,125,0.5)] rounded-[10px] px-[14px] lg:px-[18px] font-lato italic font-normal text-[14px] lg:text-[16px] leading-[17px] lg:leading-[19px] capitalize text-grey-dark opacity-95 placeholder:text-grey-dark placeholder:opacity-95 focus:outline-none focus:border-grey-dark"
+                />
+              </div>
+
+              <div class="mb-[43px] lg:mb-[50px]">
+                <label
+                  for="item-description"
+                  class="block font-lato font-semibold text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] uppercase text-black opacity-95 mb-[18px] lg:mb-[12px]"
+                >
+                  Item Description:
+                </label>
+                <textarea
+                  id="item-description"
+                  placeholder="Enter Item Description..."
+                  rows="6"
+                  class="w-full h-48 lg:h-48 lg:max-w-[897px] border border-[rgba(125,125,125,0.5)] rounded-[10px] px-[13px] lg:px-[18px] pt-[18px] lg:pt-[18px] font-lato italic font-normal text-[14px] lg:text-[16px] leading-[17px] lg:leading-[19px] capitalize text-grey-dark opacity-95 placeholder:text-grey-dark placeholder:opacity-95 focus:outline-none focus:border-grey-dark resize-none"
+                ></textarea>
+              </div>
+
+              <div class="mb-[51px] lg:mb-[51px]">
+                <label
+                  for="starting-price"
+                  class="block font-lato font-semibold text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] uppercase text-black opacity-95 mb-[21px] lg:mb-[14px]"
+                >
+                  Starting Price (Points):
+                </label>
+                <input
+                  type="text"
+                  inputmode="numeric"
+                  id="starting-price"
+                  placeholder="Enter Starting Price..."
+                  class="w-full lg:max-w-[271px] h-[45px] border border-[rgba(125,125,125,0.5)] rounded-[10px] px-[13px] lg:px-[21px] font-lato italic font-normal text-[14px] lg:text-[16px] leading-[17px] lg:leading-[19px] capitalize text-grey-dark opacity-95 placeholder:text-grey-dark placeholder:opacity-95 focus:outline-none focus:border-grey-dark"
+                />
+              </div>
+
+              <div class="mb-[50px] lg:mb-[51px]">
+                <label
+                  for="item-picture"
+                  class="block font-lato font-semibold text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] uppercase text-black opacity-95 mb-[16px] lg:mb-[16px]"
+                >
+                  Item Picture:
+                </label>
+                <button
+                  type="button"
+                  class="w-[156px] h-[32px] bg-grey-light border border-grey-medium rounded-[10px] font-lato font-medium text-[14px] lg:text-[16px] leading-[17px] lg:leading-[19px] uppercase text-black flex items-center justify-center drop-shadow-[0px_0px_5px_rgba(0,0,0,0.25)] hover:bg-grey-medium transition-colors"
+                >
+                  Upload
+                </button>
+                <input
+                  type="file"
+                  id="item-picture"
+                  accept="image/*"
+                  class="hidden"
+                />
+              </div>
+
+              <div class="mb-[65px] lg:mb-[71px]">
+                <label
+                  for="listing-deadline"
+                  class="block font-lato font-semibold text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] uppercase text-black opacity-95 mb-[15px] lg:mb-[14px]"
+                >
+                  Listing Deadline:
+                </label>
+                <div class="relative w-full lg:max-w-[194px]">
+                  <input
+                    type="text"
+                    id="listing-deadline"
+                    placeholder="dd/mm/yyyy"
+                    class="w-full lg:max-w-[194px] h-[45px] border border-[rgba(125,125,125,0.5)] rounded-[10px] pl-[49px] lg:pl-[64px] pr-[13px] font-lato italic font-normal text-[14px] lg:text-[16px] leading-[17px] lg:leading-[19px] lowercase text-grey-dark opacity-95 placeholder:text-grey-dark placeholder:opacity-95 focus:outline-none focus:border-grey-dark"
+                  />
+                  <svg
+                    class="absolute left-[15px] top-1/2 -translate-y-1/2 w-[22px] h-[24px]"
+                    viewBox="0 0 22 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.25 3H18.5V1.5C18.5 1.10218 18.342 0.720644 18.0607 0.43934C17.7794 0.158035 17.3978 0 17 0C16.6022 0 16.2206 0.158035 15.9393 0.43934C15.658 0.720644 15.5 1.10218 15.5 1.5V3H6.5V1.5C6.5 1.10218 6.34196 0.720644 6.06066 0.43934C5.77936 0.158035 5.39782 0 5 0C4.60218 0 4.22064 0.158035 3.93934 0.43934C3.65804 0.720644 3.5 1.10218 3.5 1.5V3H2.75C2.02065 3 1.32118 3.28973 0.805456 3.80546C0.289731 4.32118 0 5.02065 0 5.75L0 21.25C0 21.9793 0.289731 22.6788 0.805456 23.1945C1.32118 23.7103 2.02065 24 2.75 24H19.25C19.9793 24 20.6788 23.7103 21.1945 23.1945C21.7103 22.6788 22 21.9793 22 21.25V5.75C22 5.02065 21.7103 4.32118 21.1945 3.80546C20.6788 3.28973 19.9793 3 19.25 3ZM19.25 21.25H2.75V10H19.25V21.25Z"
+                      fill="#656565"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="flex justify-center">
+                <button
+                  type="submit"
+                  class="w-full lg:w-[420px] h-[64px] lg:h-[55px] bg-accent border-[0.5px] border-grey-dark shadow-[0px_1px_5px_rgba(0,0,0,0.19)] rounded-[6px] font-crimson italic font-semibold text-[25px] lg:text-[28px] leading-[32px] lg:leading-[36px] text-center tracking-[0.05em] capitalize text-white hover:bg-[#7a0f25] transition-colors"
+                >
+                  Submit your Listing
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden lg:block mb-[111px]"></div>
+    </main>
 
     <footer class="bg-white border-t border-grey-light">
       <div class="max-w-[1440px] mx-auto px-4 py-12">
@@ -277,7 +417,7 @@
                   <img
                     src="../assets/icons/social-media/google-play-min.png"
                     alt="Google Play"
-                    class="w-[100px] lg:w-[120px]"
+                    class="w-[112px] lg:w-[120px]"
                   />
                 </button>
               </div>

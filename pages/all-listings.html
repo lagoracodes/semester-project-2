@@ -55,15 +55,12 @@
           </nav>
 
           <div class="flex items-center justify-end gap-4 flex-1 basis-1/3">
-            <button
+            <a
+              href="login.html"
               class="font-lato text-black text-lg underline hover:text-accent underline-offset-[7px] decoration-grey-medium cursor-pointer"
             >
-              Logout
-            </button>
-
-            <div
-              class="w-10 h-10 rounded-full bg-[#D9D9D9] cursor-pointer"
-            ></div>
+              Login
+            </a>
           </div>
         </div>
       </div>
@@ -105,20 +102,6 @@
           </button>
         </div>
 
-        <div class="px-6 pb-8">
-          <div class="flex flex-col">
-            <div class="w-16 h-16 rounded-full bg-grey-medium mb-3"></div>
-
-            <p class="font-crimson text-black text-[30px] font-semibold mb-1">
-              Jane Doe
-            </p>
-
-            <p class="font-lato text-grey-dark font-semibold text-[16px] mb-1">
-              janedoe@stud.noroff.no
-            </p>
-          </div>
-        </div>
-
         <nav class="px-6 space-y-4 flex flex-col items-start">
           <a
             href="../index.html"
@@ -146,16 +129,434 @@
         </nav>
 
         <div class="mt-auto px-6 pb-6">
-          <button
+          <a
+            href="login.html"
             class="font-lato text-black text-[24px] font-medium underline underline-offset-[7px] decoration-grey-medium hover:text-accent block pb-16 text-left"
           >
-            Logout
-          </button>
+            Login
+          </a>
         </div>
       </div>
     </div>
 
-    <main class="min-h-screen"></main>
+    <main class="min-h-screen">
+      <section class="bg-accent">
+        <div class="max-w-[1440px] mx-auto">
+          <h1
+            class="font-crimson italic font-bold text-white text-center text-[36px] lg:text-[56px] leading-[47px] lg:leading-[73px] capitalize py-7 lg:py-[28px]"
+          >
+            All Listings
+          </h1>
+        </div>
+      </section>
+
+      <div class="max-w-[1440px] mx-auto px-4 lg:px-0">
+        <div
+          class="w-full max-w-[407px] lg:max-w-[1250px] mx-auto mt-8 lg:mt-12 border-t border-grey-medium"
+        ></div>
+
+        <div
+          class="w-full max-w-[408px] lg:max-w-[1250px] mx-auto mt-6 lg:mt-8 flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-6"
+        >
+          <div class="relative w-full lg:w-[500px] order-2 lg:order-1">
+            <input
+              type="text"
+              placeholder="Search..."
+              class="w-full h-[56px] bg-[#FAFAFA] border-[0.5px] border-[#656565] rounded-[6px] px-4 pl-[70px] lg:pl-[162px] font-lato text-[18px] lg:text-[24px] text-[#656565] shadow-[inset_0px_4px_4px_rgba(0,0,0,0.11)] focus:outline-none focus:border-accent placeholder-[#656565]"
+            />
+            <div
+              class="absolute left-[22px] lg:left-[104px] top-1/2 -translate-y-1/2 w-[44px] h-[44px] flex items-center justify-center"
+            >
+              <svg
+                class="w-10 h-10 lg:w-[44px] lg:h-[44px]"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="17"
+                  cy="17"
+                  r="12"
+                  stroke="#858585"
+                  stroke-width="2.5"
+                />
+                <line
+                  x1="26"
+                  y1="26"
+                  x2="35"
+                  y2="35"
+                  stroke="#858585"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <a
+            href="create-a-listing.html"
+            class="w-full lg:w-[305px] order-1 lg:order-2"
+          >
+            <button
+              class="w-full h-[40px] bg-accent text-white font-lato font-bold text-[18px] leading-[22px] text-center uppercase rounded-[10px] flex items-center justify-center gap-2 lg:gap-3 shadow-none hover:bg-opacity-90 transition-colors"
+            >
+              <span class="font-lato font-bold text-[30px] leading-[36px]"
+                >+</span
+              >
+              <span>Add a New Listing</span>
+            </button>
+          </a>
+        </div>
+
+        <div
+          class="w-full max-w-[407px] lg:max-w-[1250px] mx-auto mt-6 lg:mt-8 border-t border-grey-medium"
+        ></div>
+
+        <div class="flex justify-center py-8 lg:py-12">
+          <img
+            src="../assets/icons/icons-misc/vintage_divider.svg"
+            alt="Decorative divider"
+            class="w-[197px] lg:w-[312px] h-auto"
+          />
+        </div>
+
+        <div
+          class="grid grid-cols-1 lg:grid-cols-3 gap-y-[75px] lg:gap-x-[100px] lg:gap-y-[96px] pt-[21px] pb-12 lg:px-24"
+        >
+          <div class="flex justify-center lg:justify-start">
+            <div class="flex flex-col items-start">
+              <a href="current-listing.html" class="cursor-pointer">
+                <img
+                  src="../assets/images/images-misc/auction-pic.png"
+                  alt="Tiara Of Empress Eugénie"
+                  class="w-[289px] h-[176px] object-cover rounded-[10px] shadow-[0px_0px_21px_rgba(0,0,0,0.25)] mb-[14px] hover:opacity-90 transition-opacity"
+                />
+              </a>
+              <p
+                class="font-lato italic text-accent text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] mb-[8px] capitalize"
+              >
+                28 days left
+              </p>
+              <a href="current-listing.html" class="cursor-pointer">
+                <h3
+                  class="font-lato font-bold text-black text-[20px] lg:text-[24px] leading-[24px] lg:leading-[29px] capitalize mb-[8px] hover:text-accent transition-colors"
+                >
+                  Tiara Of Empress Eugénie
+                </h3>
+              </a>
+              <p
+                class="font-lato font-medium text-black text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] mb-[8px]"
+              >
+                750 Points (21 bids)
+              </p>
+              <a href="current-listing.html">
+                <button
+                  class="bg-accent text-white font-lato font-medium text-[14px] lg:text-[18px] leading-[17px] lg:leading-[22px] rounded-[8px] lg:rounded-[10px] w-[122px] lg:w-[156px] h-[25px] lg:h-8 hover:bg-opacity-90 transition-colors"
+                >
+                  Place A Bid
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="flex justify-center lg:justify-start">
+            <div class="flex flex-col items-start">
+              <a href="current-listing.html" class="cursor-pointer">
+                <img
+                  src="../assets/images/images-misc/auction-pic.png"
+                  alt="Viking Ulfberht Sword"
+                  class="w-[289px] h-[176px] object-cover rounded-[10px] shadow-[0px_0px_21px_rgba(0,0,0,0.25)] mb-[14px] hover:opacity-90 transition-opacity"
+                />
+              </a>
+              <p
+                class="font-lato italic text-accent text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] mb-[8px] capitalize"
+              >
+                6 days left
+              </p>
+              <a href="current-listing.html" class="cursor-pointer">
+                <h3
+                  class="font-lato font-bold text-black text-[20px] lg:text-[24px] leading-[24px] lg:leading-[29px] capitalize mb-[8px] hover:text-accent transition-colors"
+                >
+                  Viking Ulfberht Sword
+                </h3>
+              </a>
+              <p
+                class="font-lato font-medium text-black text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] mb-[8px]"
+              >
+                150 Points (7 bids)
+              </p>
+              <a href="current-listing.html">
+                <button
+                  class="bg-accent text-white font-lato font-medium text-[14px] lg:text-[18px] leading-[17px] lg:leading-[22px] rounded-[8px] lg:rounded-[10px] w-[122px] lg:w-[156px] h-[25px] lg:h-8 hover:bg-opacity-90 transition-colors"
+                >
+                  Place A Bid
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="flex justify-center lg:justify-start">
+            <div class="flex flex-col items-start">
+              <a href="current-listing.html" class="cursor-pointer">
+                <img
+                  src="../assets/images/images-misc/auction-pic.png"
+                  alt="Empress Eugénie Brooch"
+                  class="w-[289px] h-[176px] object-cover rounded-[10px] shadow-[0px_0px_21px_rgba(0,0,0,0.25)] mb-[14px] hover:opacity-90 transition-opacity"
+                />
+              </a>
+              <p
+                class="font-lato italic text-accent text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] mb-[8px] capitalize"
+              >
+                5 days left
+              </p>
+              <a href="current-listing.html" class="cursor-pointer">
+                <h3
+                  class="font-lato font-bold text-black text-[20px] lg:text-[24px] leading-[24px] lg:leading-[29px] capitalize mb-[8px] hover:text-accent transition-colors"
+                >
+                  Empress Eugénie Brooch
+                </h3>
+              </a>
+              <p
+                class="font-lato font-medium text-black text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] mb-[8px]"
+              >
+                421 Points (17 bids)
+              </p>
+              <a href="current-listing.html">
+                <button
+                  class="bg-accent text-white font-lato font-medium text-[14px] lg:text-[18px] leading-[17px] lg:leading-[22px] rounded-[8px] lg:rounded-[10px] w-[122px] lg:w-[156px] h-[25px] lg:h-8 hover:bg-opacity-90 transition-colors"
+                >
+                  Place A Bid
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="flex justify-center lg:justify-start">
+            <div class="flex flex-col items-start">
+              <a href="current-listing.html" class="cursor-pointer">
+                <img
+                  src="../assets/images/images-misc/auction-pic.png"
+                  alt="Tiara Of Empress Eugénie"
+                  class="w-[289px] h-[176px] object-cover rounded-[10px] shadow-[0px_0px_21px_rgba(0,0,0,0.25)] mb-[14px] hover:opacity-90 transition-opacity"
+                />
+              </a>
+              <p
+                class="font-lato italic text-accent text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] mb-[8px] capitalize"
+              >
+                28 days left
+              </p>
+              <a href="current-listing.html" class="cursor-pointer">
+                <h3
+                  class="font-lato font-bold text-black text-[20px] lg:text-[24px] leading-[24px] lg:leading-[29px] capitalize mb-[8px] hover:text-accent transition-colors"
+                >
+                  Tiara Of Empress Eugénie
+                </h3>
+              </a>
+              <p
+                class="font-lato font-medium text-black text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] mb-[8px]"
+              >
+                750 Points (21 bids)
+              </p>
+              <a href="current-listing.html">
+                <button
+                  class="bg-accent text-white font-lato font-medium text-[14px] lg:text-[18px] leading-[17px] lg:leading-[22px] rounded-[8px] lg:rounded-[10px] w-[122px] lg:w-[156px] h-[25px] lg:h-8 hover:bg-opacity-90 transition-colors"
+                >
+                  Place A Bid
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="flex justify-center lg:justify-start">
+            <div class="flex flex-col items-start">
+              <a href="current-listing.html" class="cursor-pointer">
+                <img
+                  src="../assets/images/images-misc/auction-pic.png"
+                  alt="Viking Ulfberht Sword"
+                  class="w-[289px] h-[176px] object-cover rounded-[10px] shadow-[0px_0px_21px_rgba(0,0,0,0.25)] mb-[14px] hover:opacity-90 transition-opacity"
+                />
+              </a>
+              <p
+                class="font-lato italic text-accent text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] mb-[8px] capitalize"
+              >
+                6 days left
+              </p>
+              <a href="current-listing.html" class="cursor-pointer">
+                <h3
+                  class="font-lato font-bold text-black text-[20px] lg:text-[24px] leading-[24px] lg:leading-[29px] capitalize mb-[8px] hover:text-accent transition-colors"
+                >
+                  Viking Ulfberht Sword
+                </h3>
+              </a>
+              <p
+                class="font-lato font-medium text-black text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] mb-[8px]"
+              >
+                150 Points (7 bids)
+              </p>
+              <a href="current-listing.html">
+                <button
+                  class="bg-accent text-white font-lato font-medium text-[14px] lg:text-[18px] leading-[17px] lg:leading-[22px] rounded-[8px] lg:rounded-[10px] w-[122px] lg:w-[156px] h-[25px] lg:h-8 hover:bg-opacity-90 transition-colors"
+                >
+                  Place A Bid
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="flex justify-center lg:justify-start">
+            <div class="flex flex-col items-start">
+              <a href="current-listing.html" class="cursor-pointer">
+                <img
+                  src="../assets/images/images-misc/auction-pic.png"
+                  alt="Empress Eugénie Brooch"
+                  class="w-[289px] h-[176px] object-cover rounded-[10px] shadow-[0px_0px_21px_rgba(0,0,0,0.25)] mb-[14px] hover:opacity-90 transition-opacity"
+                />
+              </a>
+              <p
+                class="font-lato italic text-accent text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] mb-[8px] capitalize"
+              >
+                5 days left
+              </p>
+              <a href="current-listing.html" class="cursor-pointer">
+                <h3
+                  class="font-lato font-bold text-black text-[20px] lg:text-[24px] leading-[24px] lg:leading-[29px] capitalize mb-[8px] hover:text-accent transition-colors"
+                >
+                  Empress Eugénie Brooch
+                </h3>
+              </a>
+              <p
+                class="font-lato font-medium text-black text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] mb-[8px]"
+              >
+                421 Points (17 bids)
+              </p>
+              <a href="current-listing.html">
+                <button
+                  class="bg-accent text-white font-lato font-medium text-[14px] lg:text-[18px] leading-[17px] lg:leading-[22px] rounded-[8px] lg:rounded-[10px] w-[122px] lg:w-[156px] h-[25px] lg:h-8 hover:bg-opacity-90 transition-colors"
+                >
+                  Place A Bid
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="flex justify-center lg:justify-start">
+            <div class="flex flex-col items-start">
+              <a href="current-listing.html" class="cursor-pointer">
+                <img
+                  src="../assets/images/images-misc/auction-pic.png"
+                  alt="Tiara Of Empress Eugénie"
+                  class="w-[289px] h-[176px] object-cover rounded-[10px] shadow-[0px_0px_21px_rgba(0,0,0,0.25)] mb-[14px] hover:opacity-90 transition-opacity"
+                />
+              </a>
+              <p
+                class="font-lato italic text-accent text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] mb-[8px] capitalize"
+              >
+                28 days left
+              </p>
+              <a href="current-listing.html" class="cursor-pointer">
+                <h3
+                  class="font-lato font-bold text-black text-[20px] lg:text-[24px] leading-[24px] lg:leading-[29px] capitalize mb-[8px] hover:text-accent transition-colors"
+                >
+                  Tiara Of Empress Eugénie
+                </h3>
+              </a>
+              <p
+                class="font-lato font-medium text-black text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] mb-[8px]"
+              >
+                750 Points (21 bids)
+              </p>
+              <a href="current-listing.html">
+                <button
+                  class="bg-accent text-white font-lato font-medium text-[14px] lg:text-[18px] leading-[17px] lg:leading-[22px] rounded-[8px] lg:rounded-[10px] w-[122px] lg:w-[156px] h-[25px] lg:h-8 hover:bg-opacity-90 transition-colors"
+                >
+                  Place A Bid
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="flex justify-center lg:justify-start">
+            <div class="flex flex-col items-start">
+              <a href="current-listing.html" class="cursor-pointer">
+                <img
+                  src="../assets/images/images-misc/auction-pic.png"
+                  alt="Viking Ulfberht Sword"
+                  class="w-[289px] h-[176px] object-cover rounded-[10px] shadow-[0px_0px_21px_rgba(0,0,0,0.25)] mb-[14px] hover:opacity-90 transition-opacity"
+                />
+              </a>
+              <p
+                class="font-lato italic text-accent text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] mb-[8px] capitalize"
+              >
+                6 days left
+              </p>
+              <a href="current-listing.html" class="cursor-pointer">
+                <h3
+                  class="font-lato font-bold text-black text-[20px] lg:text-[24px] leading-[24px] lg:leading-[29px] capitalize mb-[8px] hover:text-accent transition-colors"
+                >
+                  Viking Ulfberht Sword
+                </h3>
+              </a>
+              <p
+                class="font-lato font-medium text-black text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] mb-[8px]"
+              >
+                150 Points (7 bids)
+              </p>
+              <a href="current-listing.html">
+                <button
+                  class="bg-accent text-white font-lato font-medium text-[14px] lg:text-[18px] leading-[17px] lg:leading-[22px] rounded-[8px] lg:rounded-[10px] w-[122px] lg:w-[156px] h-[25px] lg:h-8 hover:bg-opacity-90 transition-colors"
+                >
+                  Place A Bid
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="flex justify-center lg:justify-start">
+            <div class="flex flex-col items-start">
+              <a href="current-listing.html" class="cursor-pointer">
+                <img
+                  src="../assets/images/images-misc/auction-pic.png"
+                  alt="Empress Eugénie Brooch"
+                  class="w-[289px] h-[176px] object-cover rounded-[10px] shadow-[0px_0px_21px_rgba(0,0,0,0.25)] mb-[14px] hover:opacity-90 transition-opacity"
+                />
+              </a>
+              <p
+                class="font-lato italic text-accent text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] mb-[8px] capitalize"
+              >
+                5 days left
+              </p>
+              <a href="current-listing.html" class="cursor-pointer">
+                <h3
+                  class="font-lato font-bold text-black text-[20px] lg:text-[24px] leading-[24px] lg:leading-[29px] capitalize mb-[8px] hover:text-accent transition-colors"
+                >
+                  Empress Eugénie Brooch
+                </h3>
+              </a>
+              <p
+                class="font-lato font-medium text-black text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] mb-[8px]"
+              >
+                421 Points (17 bids)
+              </p>
+              <a href="current-listing.html">
+                <button
+                  class="bg-accent text-white font-lato font-medium text-[14px] lg:text-[18px] leading-[17px] lg:leading-[22px] rounded-[8px] lg:rounded-[10px] w-[122px] lg:w-[156px] h-[25px] lg:h-8 hover:bg-opacity-90 transition-colors"
+                >
+                  Place A Bid
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center pt-[66px] pb-[66px] lg:px-24">
+          <button
+            class="bg-grey-light border border-grey-medium rounded-[10px] w-[156px] h-[32px] font-lato font-medium text-black text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] hover:bg-grey-medium transition-colors shadow-[0px_0px_5px_rgba(0,0,0,0.25)]"
+          >
+            Load More
+          </button>
+        </div>
+      </div>
+    </main>
 
     <footer class="bg-white border-t border-grey-light">
       <div class="max-w-[1440px] mx-auto px-4 py-12">
@@ -281,7 +682,7 @@
                   <img
                     src="../assets/icons/social-media/google-play-min.png"
                     alt="Google Play"
-                    class="w-[100px] lg:w-[120px]"
+                    class="w-[112px] lg:w-[120px]"
                   />
                 </button>
               </div>
@@ -290,7 +691,7 @@
         </div>
 
         <div class="mt-8 text-center">
-          <p class="font-lato text-black text-[13px] leading-4">
+          <p class="font-lato text-black text-[14px] leading-[17px]">
             © 2025 Nordic Auction House AS, All Rights Reserved.
           </p>
         </div>

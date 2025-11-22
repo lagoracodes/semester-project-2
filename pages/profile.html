@@ -57,9 +57,7 @@
               Logout
             </button>
 
-            <div
-              class="w-10 h-10 rounded-full bg-[#D9D9D9] cursor-pointer"
-            ></div>
+            <div class="w-10 h-10 rounded-full bg-[#D9D9D9]"></div>
           </div>
         </div>
       </div>
@@ -151,7 +149,101 @@
       </div>
     </div>
 
-    <main class="min-h-screen"></main>
+    <main class="min-h-screen flex items-center justify-center py-12 px-4">
+      <div class="w-full max-w-[600px] lg:max-w-[800px]">
+        <div class="text-center mb-12">
+          <h1
+            class="font-crimson italic font-bold text-[36px] lg:text-[56px] leading-[47px] lg:leading-[73px] capitalize text-accent mb-4"
+          >
+            My Profile
+          </h1>
+        </div>
+
+        <div
+          class="bg-[rgba(217,217,217,0.1)] shadow-[0px_4px_40px_rgba(0,0,0,0.15)] rounded-[40px] p-8 lg:p-12"
+        >
+          <div class="flex flex-col items-center gap-8">
+            <div class="flex flex-col items-center">
+              <div
+                class="w-32 h-32 lg:w-40 lg:h-40 rounded-full bg-grey-medium mb-4 flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  id="avatar-image"
+                  src=""
+                  alt="Profile avatar"
+                  class="w-full h-full object-cover hidden"
+                />
+                <span
+                  id="avatar-initials"
+                  class="font-crimson text-accent text-4xl lg:text-5xl font-bold"
+                  >JD</span
+                >
+              </div>
+              <label
+                for="avatar-upload"
+                class="font-lato text-accent text-[14px] lg:text-[16px] underline hover:no-underline cursor-pointer"
+              >
+                Update Avatar
+              </label>
+              <input
+                type="file"
+                id="avatar-upload"
+                accept="image/*"
+                class="hidden"
+              />
+            </div>
+
+            <div class="w-full space-y-4 text-center">
+              <div>
+                <label
+                  class="font-lato font-semibold text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] uppercase text-black block mb-2 opacity-95"
+                >
+                  Name
+                </label>
+                <p
+                  id="user-name"
+                  class="font-lato text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] text-black"
+                >
+                  Jane Doe
+                </p>
+              </div>
+
+              <div>
+                <label
+                  class="font-lato font-semibold text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] uppercase text-black block mb-2 opacity-95"
+                >
+                  Email
+                </label>
+                <p
+                  id="user-email"
+                  class="font-lato italic text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] text-grey-dark lowercase"
+                >
+                  janedoe@stud.noroff.no
+                </p>
+              </div>
+
+              <div>
+                <label
+                  class="font-lato font-semibold text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] uppercase text-black block mb-2 opacity-95"
+                >
+                  Total Credit
+                </label>
+                <div
+                  class="bg-grey-light rounded-[10px] px-4 py-3 inline-block"
+                >
+                  <p
+                    id="user-credit"
+                    class="font-lato font-bold text-[24px] lg:text-[28px] leading-[29px] lg:leading-[34px] text-accent"
+                  >
+                    1,000
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <footer class="bg-white border-t border-grey-light">
       <div class="max-w-[1440px] mx-auto px-4 py-12">
@@ -277,7 +369,7 @@
                   <img
                     src="../assets/icons/social-media/google-play-min.png"
                     alt="Google Play"
-                    class="w-[100px] lg:w-[120px]"
+                    class="w-[112px] lg:w-[120px]"
                   />
                 </button>
               </div>

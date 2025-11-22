@@ -6,9 +6,385 @@
     <title>Nordic Auction House | Register</title>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+
+  <body class="bg-background">
+    <header class="bg-white w-full sticky top-0 z-50">
+      <div
+        class="max-w-[1440px] mx-auto h-[107px] lg:h-20 flex items-center justify-center lg:justify-between relative px-4 lg:px-24"
+      >
+        <button
+          id="hamburger-btn"
+          class="lg:hidden absolute left-2 flex flex-col gap-[7px] p-[17px] z-50"
+        >
+          <span class="w-[37px] h-[6px] bg-grey-dark rounded-[2px]"></span>
+          <span class="w-[37px] h-[6px] bg-grey-dark rounded-[2px]"></span>
+          <span class="w-[37px] h-[6px] bg-grey-dark rounded-[2px]"></span>
+        </button>
+
+        <a href="../index.html">
+          <h1
+            class="lg:hidden font-walker text-accent text-[32px] lg:text-[36px] leading-[37px] text-center"
+          >
+            Nordic Auction House
+          </h1>
+        </a>
+
+        <div class="hidden lg:flex items-center w-full">
+          <div class="flex items-center flex-1 basis-1/3">
+            <a href="../index.html">
+              <h1 class="font-walker text-accent text-4xl leading-[41px]">
+                Nordic Auction House
+              </h1>
+            </a>
+          </div>
+
+          <nav
+            class="flex items-center justify-center gap-8 text-black text-[18px] flex-1 basis-1/3 font-lato"
+          >
+            <a href="../index.html" class="hover:text-accent">Home</a>
+
+            <a href="all-listings.html" class="hover:text-accent">Listings</a>
+
+            <a href="about.html" class="hover:text-accent">About</a>
+
+            <a href="contact.html" class="hover:text-accent">Contact</a>
+          </nav>
+
+          <div class="flex items-center justify-end gap-4 flex-1 basis-1/3">
+            <a
+              href="login.html"
+              class="font-lato text-black text-lg underline hover:text-accent underline-offset-[7px] decoration-grey-medium cursor-pointer"
+            >
+              Login
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div
+      id="menu-overlay"
+      class="lg:hidden fixed bg-black pointer-events-none"
+    ></div>
+
+    <div
+      id="mobile-menu"
+      class="lg:hidden fixed inset-0 z-[100] transform -translate-x-full transition-transform duration-[500ms] ease-in-out pointer-events-none"
+    >
+      <div
+        class="absolute top-[34px] left-0 z-[101] pointer-events-none px-6 text-center w-[85vw] min-w-[320px] max-w-[520px]"
+      >
+        <h1
+          class="font-walker text-accent text-[32px] leading-[37px] whitespace-nowrap"
+        >
+          Nordic Auction House
+        </h1>
+      </div>
+
+      <div
+        class="relative bg-white w-[85vw] min-w-[320px] max-w-[520px] h-full shadow-xl pointer-events-auto flex flex-col"
+      >
+        <div class="flex items-center justify-between pt-6 pb-8 px-6">
+          <button
+            id="close-menu-btn"
+            class="text-grey-dark text-[48px] font-bold leading-none w-12 h-12 flex items-center justify-center rounded-lg relative"
+          >
+            <span
+              class="absolute block w-[37px] h-[6px] bg-grey-dark rounded-[2px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45"
+            ></span>
+            <span
+              class="absolute block w-[37px] h-[6px] bg-grey-dark rounded-[2px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-45"
+            ></span>
+          </button>
+        </div>
+
+        <nav class="px-6 space-y-4 flex flex-col items-start">
+          <a
+            href="../index.html"
+            class="inline-block font-lato text-black text-[24px] font-normal py-2"
+            >Home</a
+          >
+
+          <a
+            href="all-listings.html"
+            class="inline-block font-lato text-black text-[24px] font-normal py-2"
+            >Listings</a
+          >
+
+          <a
+            href="about.html"
+            class="inline-block font-lato text-black text-[24px] font-normal py-2"
+            >About</a
+          >
+
+          <a
+            href="contact.html"
+            class="inline-block font-lato text-black text-[24px] font-normal py-2"
+            >Contact</a
+          >
+        </nav>
+
+        <div class="mt-auto px-6 pb-6">
+          <a
+            href="login.html"
+            class="font-lato text-black text-[24px] font-medium underline underline-offset-[7px] decoration-grey-medium hover:text-accent block pb-16 text-left"
+          >
+            Login
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <main
+      class="min-h-screen flex items-center justify-center py-12 lg:py-12 pb-24 lg:pb-12 px-4"
+    >
+      <div class="w-full max-w-[440px] lg:max-w-[700px]">
+        <div class="text-center mb-12">
+          <h1
+            class="font-crimson italic font-bold text-[36px] lg:text-[56px] leading-[47px] lg:leading-[64px] capitalize text-accent mb-4"
+          >
+            Create Your Account
+          </h1>
+          <p
+            class="font-crimson italic font-normal text-[18px] lg:text-[24px] leading-[23px] lg:leading-[28px] text-grey-dark"
+          >
+            Sign up and begin your bidding journey!
+          </p>
+        </div>
+
+        <div
+          class="bg-[rgba(217,217,217,0.1)] shadow-[0px_4px_40px_rgba(0,0,0,0.15)] rounded-[40px] p-8 lg:p-12"
+        >
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div>
+                <label
+                  class="font-lato font-semibold text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] uppercase text-black block mb-3 opacity-95"
+                >
+                  First Name
+                </label>
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  class="w-full h-12 lg:h-[55px] border border-[rgba(125,125,125,0.5)] rounded-[10px] px-4 font-lato italic font-normal text-[14px] lg:text-[16px] leading-[17px] lg:leading-[19px] text-grey-dark capitalize opacity-95 focus:outline-none focus:border-accent"
+                />
+              </div>
+
+              <div>
+                <label
+                  class="font-lato font-semibold text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] uppercase text-black block mb-3 opacity-95"
+                >
+                  Last Name
+                </label>
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  class="w-full h-12 lg:h-[55px] border border-[rgba(125,125,125,0.5)] rounded-[10px] px-4 font-lato italic font-normal text-[14px] lg:text-[16px] leading-[17px] lg:leading-[19px] text-grey-dark capitalize opacity-95 focus:outline-none focus:border-accent"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label
+                class="font-lato font-semibold text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] uppercase text-black block mb-3 opacity-95"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                placeholder="you@noroff.stud.no"
+                class="w-full h-[49.18px] lg:h-[55px] border border-[rgba(125,125,125,0.5)] rounded-[10px] px-4 font-lato italic font-normal text-[14px] lg:text-[16px] leading-[17px] lg:leading-[19px] text-grey-dark lowercase opacity-95 focus:outline-none focus:border-accent"
+              />
+            </div>
+
+            <div>
+              <label
+                class="font-lato font-semibold text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] uppercase text-black block mb-3 opacity-95"
+              >
+                Password
+              </label>
+              <input
+                type="password"
+                placeholder="••••••••"
+                class="w-full h-[49.18px] lg:h-[55px] border border-[rgba(125,125,125,0.5)] rounded-[10px] px-4 font-lato italic font-normal text-[14px] lg:text-[16px] leading-[17px] lg:leading-[19px] text-grey-dark opacity-95 focus:outline-none focus:border-accent"
+              />
+            </div>
+
+            <div>
+              <label
+                class="font-lato font-semibold text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] uppercase text-black block mb-3 opacity-95"
+              >
+                Confirm Password
+              </label>
+              <input
+                type="password"
+                placeholder="••••••••"
+                class="w-full h-[49.18px] lg:h-[55px] border border-[rgba(125,125,125,0.5)] rounded-[10px] px-4 font-lato italic font-normal text-[14px] lg:text-[16px] leading-[17px] lg:leading-[19px] text-grey-dark opacity-95 focus:outline-none focus:border-accent"
+              />
+            </div>
+
+            <button
+              type="submit"
+              class="w-full h-[64px] lg:h-[55px] bg-accent border-[0.5px] border-grey-dark shadow-[0px_1px_5px_rgba(0,0,0,0.19)] rounded-[6px] font-crimson italic font-semibold text-[25px] lg:text-[28px] leading-[32px] lg:leading-[36px] text-center tracking-[0.05em] capitalize text-white hover:bg-opacity-90 transition-colors mt-8"
+            >
+              Create Account
+            </button>
+          </form>
+
+          <div class="mt-6 text-center">
+            <p class="font-lato text-[14px] lg:text-[16px] text-grey-dark">
+              Already have an account?
+              <a
+                href="login.html"
+                class="text-accent font-semibold hover:underline ml-1"
+                >Login here</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-white border-t border-grey-light">
+      <div class="max-w-[1440px] mx-auto px-4 py-12">
+        <div
+          class="space-y-8 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8 lg:items-start"
+        >
+          <div class="text-center lg:text-right">
+            <a href="../index.html" class="inline-block">
+              <h2 class="font-walker text-accent text-[24px] lg:text-[36px]">
+                Nordic Auction House
+              </h2>
+            </a>
+
+            <div>
+              <p class="font-lato text-black text-[18px] italic mb-3">
+                Sign Up For Our Newsletter!
+              </p>
+
+              <div class="flex gap-2 justify-center lg:justify-end">
+                <input
+                  type="email"
+                  placeholder="Your Email Here.."
+                  class="font-lato bg-background border border-grey-dark lg:border-grey-medium rounded lg:rounded-[7px] px-3 py-2 lg:px-4 lg:py-0 text-[16px] lg:text-[18px] text-grey-dark italic font-medium w-36 lg:w-[217px] lg:h-[30px]"
+                />
+
+                <button
+                  class="bg-accent border border-grey-medium rounded lg:rounded-[7px] px-4 py-2 lg:px-0 lg:py-0 lg:w-[75px] lg:h-[30px] text-white font-lato text-[18px] italic"
+                >
+                  Join
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <nav class="hidden lg:flex flex-col gap-3 text-center items-center">
+            <a
+              href="../index.html"
+              class="inline-block font-lato text-black text-[18px] hover:text-accent"
+              >Home</a
+            >
+
+            <a
+              href="all-listings.html"
+              class="inline-block font-lato text-black text-[18px] hover:text-accent"
+              >Listings</a
+            >
+
+            <a
+              href="about.html"
+              class="inline-block font-lato text-black text-[18px] hover:text-accent"
+              >About</a
+            >
+
+            <a
+              href="contact.html"
+              class="inline-block font-lato text-black text-[18px] hover:text-accent"
+              >Contact</a
+            >
+          </nav>
+
+          <div class="space-y-6 text-center lg:text-right">
+            <div class="space-y-4">
+              <p class="font-lato text-black text-lg italic font-bold">
+                Follow us
+              </p>
+
+              <div class="flex gap-4 justify-center lg:justify-end">
+                <button class="w-6 h-6 cursor-pointer">
+                  <img
+                    src="../assets/icons/social-media/facebook.svg"
+                    alt="Facebook"
+                    class="w-full h-full"
+                  />
+                </button>
+
+                <button class="w-6 h-6 cursor-pointer">
+                  <img
+                    src="../assets/icons/social-media/instagram.svg"
+                    alt="Instagram"
+                    class="w-full h-full"
+                  />
+                </button>
+
+                <button class="w-6 h-6 cursor-pointer">
+                  <img
+                    src="../assets/icons/social-media/youtube.svg"
+                    alt="YouTube"
+                    class="w-full h-full"
+                  />
+                </button>
+
+                <button class="w-6 h-6 cursor-pointer">
+                  <img
+                    src="../assets/icons/social-media/twitter.svg"
+                    alt="Twitter"
+                    class="w-full h-full"
+                  />
+                </button>
+              </div>
+            </div>
+
+            <hr
+              class="border-t border-grey-light w-32 mx-auto lg:ml-auto lg:mr-0"
+            />
+
+            <div class="space-y-4">
+              <p class="font-lato text-black text-lg italic font-bold">
+                Get our app on
+              </p>
+
+              <div
+                class="space-y-2 lg:space-y-0 flex flex-col lg:flex-row lg:gap-4 items-center lg:items-end lg:justify-end"
+              >
+                <button class="cursor-pointer">
+                  <img
+                    src="../assets/icons/social-media/app-store-min.png"
+                    alt="App Store"
+                    class="w-[112px] lg:w-[120px]"
+                  />
+                </button>
+
+                <button class="cursor-pointer">
+                  <img
+                    src="../assets/icons/social-media/google-play-min.png"
+                    alt="Google Play"
+                    class="w-[112px] lg:w-[120px]"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center">
+          <p class="font-lato text-black text-[13px] leading-4">
+            © 2025 Nordic Auction House AS, All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
   </body>
 </html>
