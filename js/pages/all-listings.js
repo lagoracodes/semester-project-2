@@ -155,6 +155,54 @@ function loadMore() {
   updateLoadMoreButton();
 }
 
+function filterListings(listings, searchQuery) {
+  if (!searchQuery || searchQuery.trim() === "") {
+    return listings;
+  }
+
+  const query = searchQuery.toLowerCase().trim();
+
+  return listings.filter((listing) => {
+    const title = listing.title ? listing.title.toLowerCase() : "";
+    const description = listing.description
+      ? listing.description.toLowerCase()
+      : "";
+
+    return title.includes(query) || description.includes(query);
+  });
+}
+
+function handleSearch(searchQuery) {
+  const container = document.querySelector("#listingsContainer");
+  if (!container) return;
+
+  const sortSelect = document.querySelector("#sort-select");
+  let sortBy = "newest";
+  if (sortSelect && sortSelect.value) {
+    sortBy = sortSelect.value;
+  }
+
+  let filtered = filterListings(originalListings, searchQuery);
+  allListings = sortListings(filtered, sortBy);
+  currentlyShown = 0;
+
+  if (allListings.length === 0) {
+    container.innerHTML = `
+      <div class="col-span-full text-center py-12">
+        <p class="font-lato text-grey-dark text-lg">No listings found matching your search.</p>
+      </div>
+    `;
+    updateLoadMoreButton();
+    return;
+  }
+
+  const firstBatch = allListings.slice(0, ITEMS_PER_PAGE);
+  renderListings(container, firstBatch);
+  currentlyShown = firstBatch.length;
+
+  updateLoadMoreButton();
+}
+
 function handleSortChange(sortBy) {
   const container = document.querySelector("#listingsContainer");
   if (!container) return;
@@ -166,7 +214,10 @@ function handleSortChange(sortBy) {
   `;
 
   setTimeout(() => {
-    allListings = sortListings(originalListings, sortBy);
+    const searchInput = document.querySelector("#search-input");
+    const searchQuery = searchInput ? searchInput.value : "";
+    const filtered = filterListings(originalListings, searchQuery);
+    allListings = sortListings(filtered, sortBy);
     currentlyShown = 0;
 
     const firstBatch = allListings.slice(0, ITEMS_PER_PAGE);
@@ -226,6 +277,13 @@ export async function initAllListings() {
     if (sortSelect) {
       sortSelect.addEventListener("change", (e) => {
         handleSortChange(e.target.value);
+      });
+    }
+
+    const searchInput = document.querySelector("#search-input");
+    if (searchInput) {
+      searchInput.addEventListener("input", function (e) {
+        handleSearch(e.target.value);
       });
     }
   } catch (error) {

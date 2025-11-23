@@ -8,6 +8,11 @@
   </head>
 
   <body class="bg-background">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-accent focus:text-white focus:rounded"
+      >Skip to main content</a
+    >
     <header class="bg-white w-full sticky top-0 z-50">
       <div
         class="max-w-[1440px] mx-auto h-[107px] lg:h-20 flex items-center justify-center lg:justify-between relative px-4 lg:px-24"
@@ -15,6 +20,7 @@
         <button
           id="hamburger-btn"
           class="lg:hidden absolute left-2 flex flex-col gap-[7px] p-[17px] z-50"
+          aria-label="Open menu"
         >
           <span class="w-[37px] h-[6px] bg-grey-dark rounded-[2px]"></span>
           <span class="w-[37px] h-[6px] bg-grey-dark rounded-[2px]"></span>
@@ -75,7 +81,7 @@
             >
               <img
                 src="../assets/images/images-misc/profile-pic-placeholder.jpg"
-                alt="Profile"
+                alt="User profile picture"
                 class="w-full h-full object-cover rounded-full"
               />
             </a>
@@ -110,6 +116,7 @@
           <button
             id="close-menu-btn"
             class="text-grey-dark text-[48px] font-bold leading-none w-12 h-12 flex items-center justify-center rounded-lg relative"
+            aria-label="Close menu"
           >
             <span
               class="absolute block w-[37px] h-[6px] bg-grey-dark rounded-[2px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45"
@@ -164,7 +171,7 @@
       </div>
     </div>
 
-    <main class="min-h-screen">
+    <main id="main-content" class="min-h-screen">
       <section class="bg-accent">
         <div class="max-w-[1440px] mx-auto">
           <h1
@@ -185,11 +192,13 @@
         >
           <div class="flex flex-col gap-3 w-full lg:w-auto order-2 lg:order-1">
             <div class="relative w-full lg:w-[350px]">
+              <label for="search-input" class="sr-only">Search listings</label>
               <input
                 type="text"
                 id="search-input"
                 name="search"
                 placeholder="Search..."
+                aria-label="Search listings"
                 class="w-full h-[56px] bg-[#FAFAFA] border-[0.5px] border-[#656565] rounded-[6px] px-4 pl-[52px] lg:pl-[48px] font-lato text-[18px] lg:text-[20px] text-[#656565] shadow-[inset_0px_4px_4px_rgba(0,0,0,0.11)] focus:outline-none focus:border-accent placeholder-[#656565]"
               />
               <div

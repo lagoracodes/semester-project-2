@@ -15,6 +15,7 @@
         <button
           id="hamburger-btn"
           class="lg:hidden absolute left-2 flex flex-col gap-[7px] p-[17px] z-50"
+          aria-label="Open menu"
         >
           <span class="w-[37px] h-[6px] bg-grey-dark rounded-[2px]"></span>
           <span class="w-[37px] h-[6px] bg-grey-dark rounded-[2px]"></span>
@@ -71,7 +72,7 @@
             >
               <img
                 src="../assets/images/images-misc/profile-pic-placeholder.jpg"
-                alt="Profile"
+                alt="User profile picture"
                 class="w-full h-full object-cover rounded-full"
               />
             </a>
@@ -106,6 +107,7 @@
           <button
             id="close-menu-btn"
             class="text-grey-dark text-[48px] font-bold leading-none w-12 h-12 flex items-center justify-center rounded-lg relative"
+            aria-label="Close menu"
           >
             <span
               class="absolute block w-[37px] h-[6px] bg-grey-dark rounded-[2px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45"
@@ -183,6 +185,7 @@
           <form class="space-y-6">
             <div>
               <label
+                for="register-name"
                 class="font-lato font-semibold text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] uppercase text-black block mb-3 opacity-95"
               >
                 Name
@@ -198,6 +201,7 @@
             </div>
             <div>
               <label
+                for="register-email"
                 class="font-lato font-semibold text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] uppercase text-black block mb-3 opacity-95"
               >
                 Email
@@ -214,6 +218,7 @@
 
             <div>
               <label
+                for="register-password"
                 class="font-lato font-semibold text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] uppercase text-black block mb-3 opacity-95"
               >
                 Password
@@ -231,6 +236,7 @@
 
             <div>
               <label
+                for="register-password-confirm"
                 class="font-lato font-semibold text-[16px] lg:text-[18px] leading-[19px] lg:leading-[22px] uppercase text-black block mb-3 opacity-95"
               >
                 Confirm Password
@@ -414,7 +420,7 @@
       </div>
     </footer>
 
-    <script src="../js/script.js"></script>
+    <script type="module" src="../js/script.js"></script>
     <script type="module">
       import { register } from "../js/api/auth/register.js";
 

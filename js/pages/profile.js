@@ -122,6 +122,23 @@ function hideAvatarError() {
   }
 }
 
+function showAvatarSuccess() {
+  const errorMessage = document.getElementById("avatar-error-message");
+  if (errorMessage) {
+    errorMessage.textContent = "Profile picture updated successfully!";
+    errorMessage.classList.remove("hidden");
+    errorMessage.classList.remove("text-accent");
+    errorMessage.classList.add("text-green-600");
+
+    setTimeout(() => {
+      errorMessage.textContent = "";
+      errorMessage.classList.add("hidden");
+      errorMessage.classList.remove("text-green-600");
+      errorMessage.classList.add("text-accent");
+    }, 3000);
+  }
+}
+
 async function handleAvatarUpdate(url) {
   const avatarImage = document.getElementById("avatar-image");
   if (!avatarImage) return false;
@@ -159,6 +176,7 @@ async function handleAvatarUpdate(url) {
       localStorage.setItem("user", JSON.stringify(updatedUser));
       populateProfileFields(updatedUser);
       updateHeader();
+      showAvatarSuccess();
     }
     return true;
   } catch (error) {
